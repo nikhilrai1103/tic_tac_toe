@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var ct = 0;
+        var score1 = 0;
+        var score2 = 0;
+
+        function inpt(t) {
+            var pl1 = document.getElementById('play1').value;
+            var pl2 = document.getElementById('play2').value;
+
+            if (t == 1 && document.getElementById('a').value == '') {
+                if (ct % 2 == 0) {
+                    document.getElementById('a').value = 'X';
+                    ct = ct + 1;
+                    document.getElementById('p1').innerHTML = pl2 + "'s Turn [O]";
+                }
+                else {
+                    document.getElementById('a').value = 'O';
+                    ct = ct + 1;
+                    document.getElementById('p1').innerHTML = pl1 + "'s Turn [X]";
+                }
+                win();
+            }
+
+            if (t == 2 && document.getElementById('b').value == '') {
+                if (ct % 2 == 0) {
+                    document.getElementById('b').value = 'X';
+                    ct = ct + 1;
+                    document.getElementById('p1').innerHTML = pl2 + "'s Turn [O]";
+                }
+                else {
+                    document.getElementById('b').value = 'O';
+                    ct = ct + 1;
+                    document.getElementById('p1').innerHTML = pl1 + "'s Turn [X]";
+                }
+                win();
+            }
+
+            if (t == 3 && document.getElementById('c').value == '') {
+                if (ct % 2 == 0) {
+                    document.getElementById('c').value = 'X';
+                    ct = ct + 1;
+                    document.getElementById('p1').innerHTML = pl2 + "'s Turn [O]";
+                }
+                else {
+                    document.getElementById('c').value = 'O';
+                    ct = ct + 1;
+                    document.getElementById('p1').innerHTML = pl1 + "'s Turn [X]";
+                }
+                win();
+            }
+
+            if (t == 4 && document.getElementById('d').value == '') {
+                if (ct % 2 == 0) {
+                    document.getElementById('d').value = 'X';
+                    ct = ct + 1;
+                    document.getElementById('p1').innerHTML = pl2 + "'s Turn [O]";
+                }
+                else {
+                    document.getElementById('d').value = 'O';
+                    ct = ct + 1;
+                    document.getElementById('p1').innerHTML = pl1 + "'s Turn [X]";
+                }
+                win();
+            }
+
+            if (t == 5 && document.getElementById('e').value == '') {
+                if (ct % 2 == 0) {
+                    document.getElementById('e').value = 'X';
+                    ct = ct + 1;
+                    document.getElementById('p1').innerHTML = pl2 + "'s Turn [O]";
+                }
+                else {
+                    document.getElementById('e').value = 'O';
+                    ct = ct + 1;
+                    document.getElementById('p1').innerHTML = pl1 + "'s Turn [X]";
+                }
+                win();
+            }
+
+            if (t == 6 && document.getElementById('f').value == '') {
+                if (ct % 2 == 0) {
+                    document.getElementById('f').value = 'X';
+                    ct = ct + 1;
+                    document.getElementById('p1').innerHTML = pl2 + "'s Turn [O]";
+                }
+                else {
+                    document.getElementById('f').value = 'O';
+                    ct = ct + 1;
+                    document.getElementById('p1').innerHTML = pl1 + "'s Turn [X]";
+                }
+                win();
+            }
+
+            if (t == 7 && document.getElementById('g').value == '') {
+                if (ct % 2 == 0) {
+                    document.getElementById('g').value = 'X';
+                    ct = ct + 1;
+                    document.getElementById('p1').innerHTML = pl2 + "'s Turn [O]";
+                }
+                else {
+                    document.getElementById('g').value = 'O';
+                    ct = ct + 1;
+                    document.getElementById('p1').innerHTML = pl1 + "'s Turn [X]";
+                }
+                win();
+            }
+
+            if (t == 8 && document.getElementById('h').value == '') {
+                if (ct % 2 == 0) {
+                    document.getElementById('h').value = 'X';
+                    ct = ct + 1;
+                    document.getElementById('p1').innerHTML = pl2 + "'s Turn [O]";
+                }
+                else {
+                    document.getElementById('h').value = 'O';
+                    ct = ct + 1;
+                    document.getElementById('p1').innerHTML = pl1 + "'s Turn [X]";
+                }
+                win();
+            }
+
+            if (t == 9 && document.getElementById('i').value == '') {
+                if (ct % 2 == 0) {
+                    document.getElementById('i').value = 'X';
+                    ct = ct + 1;
+                    document.getElementById('p1').innerHTML = pl2 + "'s Turn [O]";
+                }
+                else {
+                    document.getElementById('i').value = 'O';
+                    ct = ct + 1;
+                    document.getElementById('p1').innerHTML = pl1 + "'s Turn [X]";
+                }
+                win();
+            }
+
+        }
+        function win() {
+            var a = document.getElementById('a').value;
+            var b = document.getElementById('b').value;
+            var c = document.getElementById('c').value;
+            var d = document.getElementById('d').value;
+            var e = document.getElementById('e').value;
+            var f = document.getElementById('f').value;
+            var g = document.getElementById('g').value;
+            var h = document.getElementById('h').value;
+            var i = document.getElementById('i').value;
+            var pl1 = document.getElementById('play1').value;
+            var pl2 = document.getElementById('play2').value;
+
+
+            ///abc
+            if (a == 'X' && b == 'X' && c == 'X') {
+                document.getElementById('p1').innerHTML = pl1 + " +1 Point";
+                score1 = parseInt(score1) + 1;
+                document.getElementById('score1').innerHTML = score1;
+                afterwin();
+            }
+            else if (a == 'O' && b == 'O' && c == 'O') {
+                document.getElementById('p1').innerHTML = pl2 + " +1 Point";
+                score2 = parseInt(score2) + 1;
+                document.getElementById('score2').innerHTML = score2;
+                afterwin();
+            }
+            ///def
+            else if (d == 'X' && e == 'X' && f == 'X') {
+                document.getElementById('p1').innerHTML = pl1 + " +1 Point";
+                score1 = parseInt(score1) + 1;
+                document.getElementById('score1').innerHTML = score1;
+                afterwin();
+            }
+            else if (d == 'O' && e == 'O' && f == 'O') {
+                document.getElementById('p1').innerHTML = pl2 + " +1 Point";
+                score2 = parseInt(score2) + 1;
+                document.getElementById('score2').innerHTML = score2;
+                afterwin();
+            }
+            ///ghi
+            else if (g == 'X' && h == 'X' && i == 'X') {
+                document.getElementById('p1').innerHTML = pl1 + " +1 Point";
+                score1 = parseInt(score1) + 1;
+                document.getElementById('score1').innerHTML = score1;
+                afterwin();
+            }
+            else if (g == 'O' && h == 'O' && i == 'O') {
+                document.getElementById('p1').innerHTML = pl2 + " +1 Point";
+                score2 = parseInt(score2) + 1;
+                document.getElementById('score2').innerHTML = score2;
+                afterwin();
+            }
+            ///adg
+            else if (a == 'X' && d == 'X' && g == 'X') {
+                document.getElementById('p1').innerHTML = pl1 + " +1 Point";
+                score1 = parseInt(score1) + 1;
+                document.getElementById('score1').innerHTML = score1;
+                afterwin();
+            }
+            else if (a == 'O' && d == 'O' && g == 'O') {
+                document.getElementById('p1').innerHTML = pl2 + " +1 Point";
+                score2 = parseInt(score2) + 1;
+                document.getElementById('score2').innerHTML = score2;
+                afterwin();
+            }
+            ///beh
+            else if (b == 'X' && e == 'X' && h == 'X') {
+                document.getElementById('p1').innerHTML = pl1 + " +1 Point";
+                score1 = parseInt(score1) + 1;
+                document.getElementById('score1').innerHTML = score1;
+                afterwin();
+            }
+            else if (b == 'O' && e == 'O' && h == 'O') {
+                document.getElementById('p1').innerHTML = pl2 + " +1 Point";
+                score2 = parseInt(score2) + 1;
+                document.getElementById('score2').innerHTML = score2;
+                afterwin();
+            }
+            ///cfi
+            else if (c == 'X' && f == 'X' && i == 'X') {
+                document.getElementById('p1').innerHTML = pl1 + " +1 Point";
+                score1 = parseInt(score1) + 1;
+                document.getElementById('score1').innerHTML = score1;
+                afterwin();
+            }
+            else if (c == 'O' && f == 'O' && i == 'O') {
+                document.getElementById('p1').innerHTML = pl2 + " +1 Point";
+                score2 = parseInt(score2) + 1;
+                document.getElementById('score2').innerHTML = score2;
+                afterwin();
+            }
+            ///aei
+            else if (a == 'X' && e == 'X' && i == 'X') {
+                document.getElementById('p1').innerHTML = pl1 + " +1 Point";
+                score1 = parseInt(score1) + 1;
+                document.getElementById('score1').innerHTML = score1;
+                afterwin();
+            }
+            else if (a == 'O' && e == 'O' && i == 'O') {
+                document.getElementById('p1').innerHTML = pl2 + " +1 Point";
+                score2 = parseInt(score2) + 1;
+                document.getElementById('score2').innerHTML = score2;
+                afterwin();
+            }
+            ///ceg
+            else if (c == 'X' && e == 'X' && g == 'X') {
+                document.getElementById('p1').innerHTML = pl1 + " +1 Point";
+                score1 = parseInt(score1) + 1;
+                document.getElementById('score1').innerHTML = score1;
+                afterwin();
+            }
+            else if (c == 'O' && e == 'O' && g == 'O') {
+                document.getElementById('p1').innerHTML = pl2 + " +1 Point";
+                score2 = parseInt(score2) + 1;
+                document.getElementById('score2').innerHTML = score2;
+                afterwin();
+            }
+
+            if (score1 == 3) {
+                document.getElementById('p1').innerHTML = pl1 + " Wins The Game.";
+                afterwin();
+                score1 = 0;
+                score2 = 0;
+            }
+            else if (score2 == 3) {
+                document.getElementById('p1').innerHTML = pl2 + " Wins The Game.";
+                afterwin();
+                score1 = 0;
+                score2 = 0;
+            }
+
+        }
+        function afterwin() {
+            if (document.getElementById('a').value == '') {
+                document.getElementById('a').value = '-';
+            }
+            if (document.getElementById('b').value == '') {
+                document.getElementById('b').value = '-';
+            }
+            if (document.getElementById('c').value == '') {
+                document.getElementById('c').value = '-';
+            }
+            if (document.getElementById('d').value == '') {
+                document.getElementById('d').value = '-';
+            }
+            if (document.getElementById('e').value == '') {
+                document.getElementById('e').value = '-';
+            }
+            if (document.getElementById('f').value == '') {
+                document.getElementById('f').value = '-';
+            }
+            if (document.getElementById('g').value == '') {
+                document.getElementById('g').value = '-';
+            }
+            if (document.getElementById('h').value == '') {
+                document.getElementById('h').value = '-';
+            }
+            if (document.getElementById('i').value == '') {
+                document.getElementById('i').value = '-';
+            }
+
+        }
+        function start() {
+            document.getElementById('bottom').style.visibility = 'visible';
+            document.getElementById('restart').style.visibility = 'visible';
+            document.getElementById('clear').style.visibility = 'visible';
+            document.getElementById('new').style.visibility = 'visible';
+            var pl1 = document.getElementById('play1').value;
+            document.getElementById('pla1').innerHTML = pl1;
+            var pl2 = document.getElementById('play2').value;
+            document.getElementById('pla2').innerHTML = pl2;
+            document.getElementById('hmiddle').style.visibility = 'hidden';
+            document.getElementById('start').style.visibility = 'hidden';
+
+            document.getElementById('score1').innerHTML = '0';
+            document.getElementById('score2').innerHTML = '0';
+            document.getElementById('p1').innerHTML = pl1 + "'s Turn [X]";
+
+        }
+        function restart() {
+            cler();
+            score1 = 0;
+            document.getElementById('score1').innerHTML = score1;
+            score2 = 0;
+            document.getElementById('score2').innerHTML = score2;
+        }
+        function cler() {
+            var pl1 = document.getElementById('play1').value;
+            document.getElementById('a').value = '';
+            document.getElementById('b').value = '';
+            document.getElementById('c').value = '';
+            document.getElementById('d').value = '';
+            document.getElementById('e').value = '';
+            document.getElementById('f').value = '';
+            document.getElementById('g').value = '';
+            document.getElementById('h').value = '';
+            document.getElementById('i').value = '';
+            document.getElementById('p1').innerHTML = pl1 + "'s Turn [X]";
+            ct = 0;
+
+        }
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+    <div class="head">
+        <div><p>First To Score- +3 Points Wins</p></div>
+        <div><span>Tic-Tac-Toe</span></div>
+        <div class="new" id="new"><a href="p95.html"><input type="button" value="New Game"></a></div>
+
+    </div>
+    <div class="header">
+        <div class="hleft">
+            <p id="p1"></p>
+            <div id="restart"><span><input type="button" value="Re-Start" onclick="restart()"></span></div>
+        </div>
+        <div id="hmiddle">
+            <div class="playfle">
+                <span><input type="text" id="play1" value="Player-A"></span>
+                <span><input type="text" id="play2" value="Player-B"></span>
+            </div>
+        </div>
+        <div class="hright">
+            <div id="start"><span><input type="button" value="Start" onclick="start()"></span></div>
+            <div id="clear"><span><input type="button" value="Clear" onclick="cler()"></span></div>
+        </div>
+    </div>
+    <div class="bottom" id="bottom">
+        <div class="side1">
+            <p id="pla1"></p>
+            <p id="score1"></p>
+        </div>
+        <div class="side2">
+            <div class="r1 r">
+                <div class="c1"><input type="button" value="" id="a" onclick="inpt(1)"></div>
+                <div class="c2"><input type="button" value="" id="b" onclick="inpt(2)"></div>
+                <div class="c3"><input type="button" value="" id="c" onclick="inpt(3)"></div>
+            </div>
+            <div class="r2 r">
+                <div class="c1"><input type="button" value="" id="d" onclick="inpt(4)"></div>
+                <div class="c2"><input type="button" value="" id="e" onclick="inpt(5)"></div>
+                <div class="c3"><input type="button" value="" id="f" onclick="inpt(6)"></div>
+            </div>
+            <div class="r3 r">
+                <div class="c1"><input type="button" value="" id="g" onclick="inpt(7)"></div>
+                <div class="c2"><input type="button" value="" id="h" onclick="inpt(8)"></div>
+                <div class="c3"><input type="button" value="" id="i" onclick="inpt(9)"></div>
+            </div>
+
+
+        </div>
+        <div class="side3">
+            <p id="pla2"></p>
+            <p id="score2"></p>
+        </div>
+    </div>
+
+</body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-size: 60px;
+    }
+
+    body {
+        position: absolute;
+        background-image: url('a.jpg');
+        width: 100%;
+        background-size: cover;
+    }
+
+    .head span {
+        font-size: 100px;
+        font-weight: bold;
+        color: black;
+        border-bottom: 5px solid wheat;
+        background: transparent;
+    }
+
+    .head p {
+        width: 200px;
+        font-size: 30px;
+        color: black;
+        text-decoration: underline;
+    }
+
+    .head {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        background: transparent;
+        backdrop-filter: blur(5px);
+
+    }
+
+    .new a input {
+        font-size: 40px;
+        background-color: green;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+
+    .header {
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+        background: transparent;
+        backdrop-filter: blur(5px);
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .hleft {
+        width: 25%;
+    }
+
+    #restart input {
+        font-size: 40px;
+        background-color: blue;
+        color: white;
+        padding: 5px;
+    }
+
+    .hmiddle {
+        width: 50%;
+    }
+
+    .hright input {
+        font-size: 40px;
+        background-color: blue;
+        color: white;
+        padding: 0 5px;
+    }
+
+    .hright {
+        width: 25%;
+    }
+
+    .header span input {
+        text-align: center;
+        font-size: 30px;
+        width: 80%;
+        height: 50px;
+        border-radius: 10px;
+        margin: 5px;
+    }
+
+    .bottom {
+
+        width: 100%;
+        height: auto;
+        background: url(1.jpeg);
+        background-size: cover;
+        display: flex;
+        border: 2px solid gainsboro;
+        border-radius: 20px;
+    }
+
+    .side1,
+    .side3 {
+        width: 20%;
+        font-size: 40px;
+        font-weight: bold;
+        background: transparent;
+        backdrop-filter: blur(10px);
+        border: 2px solid gainsboro;
+        border-radius: 20px;
+        margin: 20px;
+        text-align: center;
+    }
+
+    #pla1,
+    #pla2 {
+        font-size: 40px;
+    }
+
+    .side2 {
+        width: 60%;
+        border: 2px solid gainsboro;
+        border-radius: 20px;
+        margin: 20px;
+    }
+
+    .r1,
+    .r2,
+    .r3 {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .r div input {
+        width: 150px;
+        height: 150px;
+        margin: 10px;
+        border-radius: 10px;
+        font-size: 100px;
+        background-image: linear-gradient(slateblue, aquamarine, palevioletred);
+        color: purple;
+        font-weight: bolder;
+    }
+
+    .r div input:hover {
+        background-color: gainsboro;
+    }
+
+    #p1 {
+        font-size: 40px;
+        text-align: center;
+        font-weight: bold;
+        color: yellow;
+    }
+
+    @media screen and (max-width:1000px) {
+        .head span {
+            font-size: 70px;
+        }
+
+        .head p {
+            width: 130px;
+            font-size: 20px;
+        }
+
+        .new a input {
+            font-size: 30px;
+        }
+
+        .r div input {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            font-size: 80px;
+        }
+        .side1,.side2,.side3{
+            margin: 5px;
+        }
+        .header span input {
+            width: 80%;
+        }
+
+        #pla1,
+        #pla2 {
+            font-size: 30px;
+        }
+
+        #p1 {
+            font-size: 25px;
+        }
+        #restart input{
+            font-size: 30px;
+        }
+    }
+    @media screen and (max-width:850px){
+        #restart input{
+            font-size: 20px;
+            width: 100px;
+        }
+        #clear input{
+            font-size: 20px;
+        }
+    }
+
+    @media screen and (max-width:600px){
+        .head{
+            flex-direction: column;
+        }
+        .head p{
+            width: 100%;
+        }
+
+        #restart input{
+            font-size: 20px;
+        }
+        #p1{
+            font-size: 20px;
+        }
+        .new a input {
+            font-size: 20px;
+        }
+        .header span input {
+            width: 80%;
+            font-size: 20px;
+        }
+        
+        .bottom{
+            flex-direction: column;
+        }
+        .side1,.side2,.side3{
+            width: 95%;
+        }
+        .r div input {
+            width: 80px;
+            height: 80px;
+            margin: 5px;
+            font-size: 60px;
+        }
+
+    }
+</style>
+<script>
+    document.getElementById('bottom').style.visibility = 'hidden';
+    document.getElementById('restart').style.visibility = 'hidden';
+    document.getElementById('clear').style.visibility = 'hidden';
+    document.getElementById('new').style.visibility = 'hidden';
+
+</script>
+
+</html>
